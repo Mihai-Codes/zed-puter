@@ -22,7 +22,7 @@ jobs:
           components: clippy, rustfmt
       
       - name: Install wasm32 target
-        run: rustup target add wasm32-wasip1
+        run: rustup target add wasm32-wasi
       
       - name: Check formatting
         run: cargo fmt --all -- --check
@@ -34,7 +34,7 @@ jobs:
         run: cargo build --release
       
       - name: Build for WASM
-        run: cargo build --target wasm32-wasip1 --release
+        run: cargo build --target wasm32-wasi --release
 
   test:
     runs-on: ubuntu-latest
@@ -45,13 +45,14 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-action@stable
       
+      - name: Install cargo-tarpaulin
+        uses: taiki-e/install-action@cargo-tarpaulin
+      
       - name: Run tests
         run: cargo test --all-features
       
       - name: Generate coverage report
-        run: |
-          cargo install cargo-tarpaulin
-          cargo tarpaulin --out xml --output-dir coverage
+        run: cargo tarpaulin --out xml --output-dir coverage
       
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
