@@ -1,7 +1,11 @@
 # zed-puter
 
+[![CI](https://github.com/Mihai-Codes/zed-puter/actions/workflows/ci.yml/badge.svg)](https://github.com/Mihai-Codes/zed-puter/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/Mihai-Codes/zed-puter/graph/badge.svg)](https://codecov.io/gh/Mihai-Codes/zed-puter)
 [![Zed Extension](https://img.shields.io/badge/Zed-Extension-blue)](https://zed.dev/extensions/puter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org/)
+[![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-purple)](https://modelcontextprotocol.io/)
 
 > 🚧 **Work in Progress** - This extension is under active development.
 
