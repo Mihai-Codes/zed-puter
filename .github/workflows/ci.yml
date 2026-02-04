@@ -20,21 +20,16 @@ jobs:
         uses: dtolnay/rust-action@stable
         with:
           components: clippy, rustfmt
-      
-      - name: Install wasm32 target
-        run: rustup target add wasm32-wasi
+          targets: wasm32-wasip1
       
       - name: Check formatting
         run: cargo fmt --all -- --check
       
       - name: Run clippy
-        run: cargo clippy --all-targets --all-features -- -D warnings
-      
-      - name: Build
-        run: cargo build --release
+        run: cargo clippy --target wasm32-wasip1 --all-targets --all-features -- -D warnings
       
       - name: Build for WASM
-        run: cargo build --target wasm32-wasi --release
+        run: cargo build --target wasm32-wasip1 --release
 
   test:
     runs-on: ubuntu-latest
