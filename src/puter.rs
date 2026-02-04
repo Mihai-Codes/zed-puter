@@ -9,7 +9,7 @@ use zed_extension_api::{
 // The npm package that contains the MCP server
 // TODO: Publish puter-mcp-server to npm when ready
 const PACKAGE_NAME: &str = "opencode-puter-auth";
-const PACKAGE_VERSION: &str = "latest";
+const PACKAGE_VERSION: &str = "1.1.1";
 const SERVER_PATH: &str = "node_modules/opencode-puter-auth/dist/mcp-server.js";
 
 /// Settings for the Puter MCP extension
